@@ -3,9 +3,12 @@ package com.emrizkiem.myfirstapps.implement.game;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.emrizkiem.myfirstapps.R;
@@ -26,11 +29,11 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-        input =  findViewById(R.id.iv_input);
-        output = findViewById(R.id.iv_output);
-        rock = findViewById(R.id.btn_rock);
-        paper = findViewById(R.id.btn_paper);
-        scissors = findViewById(R.id.btn_scissors);
+        input = (ImageView) findViewById(R.id.iv_input);
+        output = (ImageView) findViewById(R.id.iv_output);
+        rock = (Button) findViewById(R.id.btn_rock);
+        paper = (Button) findViewById(R.id.btn_paper);
+        scissors = (Button) findViewById(R.id.btn_scissors);
 
         rock.setOnClickListener(this);
         paper.setOnClickListener(this);
@@ -89,14 +92,28 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
     private void showResult(int result) {
         if (result == 0) {
-            Toast toastLost = Toast.makeText(this, "Oh! You Lost :(", Toast.LENGTH_SHORT);
-//            View toastView = (View) toastLost.getView();
-//            toastView.setBackgroundResource(R.drawable.toast_error);
+            Toast toastLost = new Toast(getApplicationContext());
+            // Set layout custom toast error
+            LayoutInflater inflater = getLayoutInflater();
+            View layout = inflater.inflate(R.layout.custom_toast_error, findViewById(R.id.toastError));
+            // Set id textview and set text for message Toast lost
+            TextView textView = layout.findViewById(R.id.tvMessage);
+            textView.setText("Oh! You Lost :(");
+
+            toastLost.setDuration(Toast.LENGTH_SHORT);
+            toastLost.setView(layout);
             toastLost.show();
         } else if (result == 1) {
-            Toast toastWin = Toast.makeText(this, "You Won! Yeah! :)", Toast.LENGTH_SHORT);
-//            View toastView = (View)toastWin.getView();
-//            toastView.setBackgroundResource(R.drawable.toast_success);
+            Toast toastWin = new Toast(getApplicationContext());
+            // Set layout custom toast success
+            LayoutInflater inflater = getLayoutInflater();
+            View layout = inflater.inflate(R.layout.custom_toast_success, findViewById(R.id.toastSuccess));
+            // Set id textview and set text for message Toast win
+            TextView textView = layout.findViewById(R.id.tvMessage);
+            textView.setText("You Won! Yeah! :)");
+
+            toastWin.setDuration(Toast.LENGTH_SHORT);
+            toastWin.setView(layout);
             toastWin.show();
         } else {
             Toast.makeText(this, "OOPS! It's a Tie! :P", Toast.LENGTH_SHORT).show();

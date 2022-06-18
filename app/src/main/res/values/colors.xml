@@ -10,4 +10,6 @@
     <color name="blue">#90caf9</color>
     <color name="blue_dark">#5d99c6</color>
     <color name="blue_light">#c3fdff</color>
+    <color name="red">#F44336</color>
+    <color name="green">#4CAF50</color>
 </resources>
