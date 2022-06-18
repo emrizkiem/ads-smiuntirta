@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    tools:context=".FirstLaunchActivity">
+
+    <Button
+        android:id="@+id/btnActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:text="Activity"
+        android:fontFamily="@font/ubuntu"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/btnFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:text="Fragment"
+        android:fontFamily="@font/ubuntu"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/btnIntent"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:text="Intent"
+        android:fontFamily="@font/ubuntu"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/btnRecyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:text="Recyclerview"
+        android:fontFamily="@font/ubuntu"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

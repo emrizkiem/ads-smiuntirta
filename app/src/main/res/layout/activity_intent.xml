@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    tools:context=".learn.intent.IntentActivity">
+
+    <Button
+        android:id="@+id/btnDial"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Dial Number"
+        android:backgroundTint="#E91E63"
+        android:drawableLeft="@drawable/ic_baseline_phone_24"
+        android:textAllCaps="false"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Camera"
+        android:backgroundTint="#FFC107"
+        android:drawableLeft="@drawable/ic_baseline_camera_alt_24"
+        android:textAllCaps="false"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnGame"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:text="Game"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp"
+        android:drawableLeft="@drawable/ic_baseline_videogame_asset_24"
+        android:backgroundTint="#4CAF50"
+        android:textAllCaps="false"/>
+
+    <ImageView
+        android:id="@+id/imgResultCamera"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_image"
+        android:scaleType="fitXY"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>
