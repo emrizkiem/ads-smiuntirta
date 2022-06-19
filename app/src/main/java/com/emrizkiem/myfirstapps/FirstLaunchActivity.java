@@ -13,6 +13,7 @@ import com.emrizkiem.myfirstapps.learn.activity.MainActivity;
 import com.emrizkiem.myfirstapps.learn.fragment.MainFragment;
 import com.emrizkiem.myfirstapps.learn.intent.IntentActivity;
 import com.emrizkiem.myfirstapps.learn.recyclerview.RecyclerviewActivity;
+import com.emrizkiem.myfirstapps.learn.room.RoomActivity;
 
 public class FirstLaunchActivity extends AppCompatActivity {
 
@@ -25,6 +26,7 @@ public class FirstLaunchActivity extends AppCompatActivity {
         Button btnFragment = findViewById(R.id.btnFragment);
         Button btnIntent = findViewById(R.id.btnIntent);
         Button btnRecyclerview = findViewById(R.id.btnRecyclerView);
+        Button btnRoom = findViewById(R.id.btnRoom);
 
         // Example Intent Explicit
         btnActivity.setOnClickListener((View v) -> {
@@ -47,6 +49,11 @@ public class FirstLaunchActivity extends AppCompatActivity {
         btnRecyclerview.setOnClickListener((View v) -> {
             Intent moveToRv = new Intent(FirstLaunchActivity.this, RecyclerviewActivity.class);
             startActivity(moveToRv);
+        });
+
+        btnRoom.setOnClickListener((View v) -> {
+            Intent moveToRoom = new Intent(FirstLaunchActivity.this, RoomActivity.class);
+            startActivity(moveToRoom);
         });
     }
 }
