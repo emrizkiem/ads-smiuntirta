@@ -3,6 +3,7 @@ package com.emrizkiem.myfirstapps.implement.game;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -101,6 +102,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             textView.setText("Oh! You Lost :(");
 
             toastLost.setDuration(Toast.LENGTH_SHORT);
+            toastLost.setGravity(Gravity.TOP, 0, 0); // Set toast to top
             toastLost.setView(layout);
             toastLost.show();
         } else if (result == 1) {

@@ -12,6 +12,7 @@ import com.emrizkiem.myfirstapps.learn.activity.DetailActivity;
 import com.emrizkiem.myfirstapps.learn.activity.MainActivity;
 import com.emrizkiem.myfirstapps.learn.fragment.MainFragment;
 import com.emrizkiem.myfirstapps.learn.intent.IntentActivity;
+import com.emrizkiem.myfirstapps.learn.recyclerview.RecyclerviewActivity;
 
 public class FirstLaunchActivity extends AppCompatActivity {
 
@@ -44,12 +45,8 @@ public class FirstLaunchActivity extends AppCompatActivity {
         });
 
         btnRecyclerview.setOnClickListener((View v) -> {
-
+            Intent moveToRv = new Intent(FirstLaunchActivity.this, RecyclerviewActivity.class);
+            startActivity(moveToRv);
         });
-
-//        btnGame.setOnClickListener((View v) -> {
-//            Intent moveToGameActivity = new Intent(FirstLaunchActivity.this, GameActivity.class);
-//            startActivity(moveToGameActivity);
-//        });
     }
 }
