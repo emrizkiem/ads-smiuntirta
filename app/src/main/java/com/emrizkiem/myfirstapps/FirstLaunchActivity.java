@@ -7,13 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.emrizkiem.myfirstapps.implement.game.GameActivity;
 import com.emrizkiem.myfirstapps.learn.activity.DetailActivity;
 import com.emrizkiem.myfirstapps.learn.activity.MainActivity;
-import com.emrizkiem.myfirstapps.learn.fragment.MainFragment;
 import com.emrizkiem.myfirstapps.learn.intent.IntentActivity;
 import com.emrizkiem.myfirstapps.learn.recyclerview.RecyclerviewActivity;
-import com.emrizkiem.myfirstapps.learn.room.RoomActivity;
+import com.emrizkiem.myfirstapps.learn.room.ui.main.RoomActivity;
 
 public class FirstLaunchActivity extends AppCompatActivity {
 

@@ -25,9 +25,14 @@ android {
 
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        viewBinding true
     }
 }
 
@@ -37,6 +42,16 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     // Recyclerview
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    // Cardview
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    // Jetpack
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.3.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata:2.3.1'
+
+    // Room database
+    implementation 'androidx.room:room-runtime:2.4.2'
+    annotationProcessor 'androidx.room:room-compiler:2.4.2'
 
     // Unit test
     testImplementation 'junit:junit:4.13.2'
